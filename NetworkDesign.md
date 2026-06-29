@@ -216,9 +216,25 @@ To further analyze the network communication, Simulation Mode was used to track 
 
 ## 🌟 Part 4 – Troubleshooting Section
 In any network environment, issues can arise due to configuration errors. This section explores two common problems encountered during the setup and their solutions.
-Problem 1: Incorrect Default Gateway
+
+💡Problem 1: Incorrect Default Gateway
 - **Description:** A PC in the Sales department was unable to access the Server Farm, although it could ping other devices in the same room.
 - **Investigation:** Upon checking the IP Configuration, it was discovered that the Default Gateway was set incorrectly to 192.168.20.5 instead of 192.168.20.1.
 - **Solution:** Corrected the Gateway IP on the Sales PC. This restored the connection to the Router and the rest of the network.
 
+![P11](Images/P11.png)
 
+![P12](Images/P12.png)
+
+![P13](Images/P13.png)
+
+![P14](Images/P14.png)
+
+💡Problem 2: Disabled Interface (Shutdown State)
+- **Description:** The entire IT and Server wing lost connectivity to the rest of the company.
+- **Investigation:** we noticed that interface GigabitEthernet 0/0 was in an "Administratively Down" state.
+- **Solution:** Entered global configuration mode and used the no shutdown command on the interface. The link status changed to "Up," and connectivity was restored.
+
+![P21](Images/P21.png)
+
+![P22](Images/P22.png)
