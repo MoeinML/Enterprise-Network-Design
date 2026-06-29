@@ -150,24 +150,24 @@ The Default Gateway is the "exit door" for every computer in our network. Each d
 
 ### 3.3 How Routing Works (TCP vs. UDP)
 Routing is the process of finding the best path for data.
-- TCP (Transmission Control Protocol): It is reliable and ensures data arrives correctly. For example, when an IT staff member accesses a database on the Server, TCP is used. It creates a "handshake" to make sure the server is ready before sending the data.
-- UDP (User Datagram Protocol): It is faster but doesn't check if data arrived. It is used for things like live video streaming where speed is more important than 100% accuracy.
-- In our design: We primarily use TCP for department-to-server communication to ensure no data is lost during financial or administrative tasks.
+- **TCP (Transmission Control Protocol):** It is reliable and ensures data arrives correctly. For example, when an IT staff member accesses a database on the Server, TCP is used. It creates a "handshake" to make sure the server is ready before sending the data.
+- **UDP (User Datagram Protocol):** It is faster but doesn't check if data arrived. It is used for things like live video streaming where speed is more important than 100% accuracy.
+- **In our design:** We primarily use TCP for department-to-server communication to ensure no data is lost during financial or administrative tasks.
 
 ### 3.4 Application Protocols Examples
 In our company scenario, we use several protocols to handle daily tasks:
-- HTTP / HTTPS: Used by employees to browse the company’s internal website (the web portal for food orders).
-- DNS (Domain Name System): Translates names like www.food-dist.com into the Server's IP address, so users don't have to memorize numbers.
-- DHCP (Dynamic Host Configuration Protocol): Automatically gives IP addresses to new PCs added to the Sales or Finance departments.
-- FTP (File Transfer Protocol): Used by the IT department to upload large firmware updates or backup files to the Main Server.
-- Email (SMTP/POP3): Allows the Admin department to send official notices and invoices to other units.
+- **HTTP / HTTPS:** Used by employees to browse the company’s internal website (the web portal for food orders).
+- **DNS (Domain Name System):** Translates names like www.food-dist.com into the Server's IP address, so users don't have to memorize numbers.
+- **DHCP (Dynamic Host Configuration Protocol):** Automatically gives IP addresses to new PCs added to the Sales or Finance departments.
+- **FTP (File Transfer Protocol):** Used by the IT department to upload large firmware updates or backup files to the Main Server.
+- **Email (SMTP/POP3):** Allows the Admin department to send official notices and invoices to other units.
 
 ### 3.5 Server Services Implementation
 To demonstrate the practical use of the network, we configured the central Server to provide web and naming services. The following steps were performed:
 #### 🗂️ Step 1: Server IP Configuration (Prerequisite)
 Before enabling services, the Server was configured with a static IP address to ensure it remains reachable by all departments.
-- IP Address: 192.168.50.10
-- Subnet Mask: 255.255.255.0
-- Default Gateway: 192.168.50.1 (Router’s sub-interface for the Server Farm)
-- DNS Server: 192.168.50.10 (The server points to itself for DNS resolution)
+- **IP Address:** 192.168.50.10
+- **Subnet Mask:** 255.255.255.0
+- **Default Gateway:** 192.168.50.1 (Router’s sub-interface for the Server Farm)
+- **DNS Server:** 192.168.50.10 (The server points to itself for DNS resolution)
 
