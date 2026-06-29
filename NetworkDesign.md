@@ -106,6 +106,7 @@ exit
 exit
 write memory
 ```
+![SW-L](Images/SW-L.jpg)
 
 **🔗 Right Switch**
 ```
@@ -129,3 +130,5 @@ exit
 exit
 write memory
 ```
+![SW-R](Images/SW-R.jpg)
+
