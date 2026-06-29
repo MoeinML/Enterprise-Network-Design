@@ -78,5 +78,54 @@ write memory
 
 ![Router](Images/Router.jpg)
 
+### 2.4 Switch Configuration (Left and Right)
+The switches were configured to support logical separation using VLANs.
+- **VLAN Creation:** VLANs 10, 20, 40, and 50 were created and named according to the departments.
+- **Access Ports:** Specific ports were assigned to each VLAN to keep department traffic isolated.
+- **Trunk Ports:** The ports connecting the switches to the router were set to Trunk Mode to allow all VLAN traffic to pass through.
 
+**🔗 Left Switch**
+```
+enable
+configure terminal
+vlan 40
+name IT_Department
+exit
+vlan 50
+name Server_Farm
+exit
+interface range fa0/1-10
+switchport mode access
+switchport access vlan 40
+interface range fa0/11-20
+switchport mode access
+switchport access vlan 50
+interface gig0/1
+switchport mode trunk
+exit
+exit
+write memory
+```
 
+**🔗 Right Switch**
+```
+enable
+configure terminal
+vlan 10
+name Finance
+exit
+vlan 20
+name Sales
+exit
+interface range fa0/1-10
+switchport mode access
+switchport access vlan 10
+interface range fa0/11-20
+switchport mode access
+switchport access vlan 20
+interface gig0/1
+switchport mode trunk
+exit
+exit
+write memory
+```
