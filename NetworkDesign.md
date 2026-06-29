@@ -212,3 +212,13 @@ To confirm the entire infrastructure (Routing, HTTP, and DNS) is working correct
 
 To further analyze the network communication, Simulation Mode was used to track TCP traffic. This confirmed the reliable delivery of data and verified that the Router correctly performs Inter-VLAN routing for every step of the TCP three-way handshake.
 
+![TCP](Images/TCP.png)
+
+## 🌟 Part 4 – Troubleshooting Section
+In any network environment, issues can arise due to configuration errors. This section explores two common problems encountered during the setup and their solutions.
+Problem 1: Incorrect Default Gateway
+- **Description:** A PC in the Sales department was unable to access the Server Farm, although it could ping other devices in the same room.
+- **Investigation:** Upon checking the IP Configuration, it was discovered that the Default Gateway was set incorrectly to 192.168.20.5 instead of 192.168.20.1.
+- **Solution:** Corrected the Gateway IP on the Sales PC. This restored the connection to the Router and the rest of the network.
+
+
