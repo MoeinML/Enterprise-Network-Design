@@ -132,3 +132,13 @@ write memory
 ```
 ![SW-R](Images/SW-R.jpg)
 
+### 2.5 Connectivity Testing (Ping Results)
+To verify the implementation, extensive connectivity tests were performed using the ICMP (Ping) command. Successful pings from the Finance PC (192.168.10.10) to other networks confirmed that the router is correctly routing traffic between all five departments.
+- Ping to IT: Successful
+- Ping to Sales: Successful
+- Ping to Admin: Successful
+- Ping to Servers: Successful
+
+![ping](Images/ping.jpg)
+
+
