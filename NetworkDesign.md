@@ -178,4 +178,8 @@ We activated the Web Server service to host the company’s internal portal.
 - Navigated to Services > HTTP and turned On both HTTP and HTTPS options.
 - Edited the index.html file to display a custom welcome message: ``` <h1>Welcome to Food Distribution Co. Portal</h1>.```
 
+![Server2](Images/Server2.jpg)
+
+![Server3](Images/Server3.jpg)
+
 
