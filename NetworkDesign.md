@@ -189,5 +189,26 @@ To avoid using complex IP addresses, the DNS service was configured to map a dom
   - **Name:** www.food-dist.com
   - **Address:** 192.168.50.10
 
+![Server4](Images/Server4.jpg)
 
+![Server5](Images/Server5.jpg)
+
+#### 🗂️ Step 4: Client DNS Configuration
+For the PCs in other departments (like Sales and Finance) to recognize the domain name, their IP settings were updated.
+- Entered the IP Configuration of each PC.
+- Set the DNS Server field to 192.168.50.10.
+
+![Server6](Images/Server6.jpg)
+
+#### 🗂️ Step 5: Final Verification (The Moment of Truth)
+To confirm the entire infrastructure (Routing, HTTP, and DNS) is working correctly:
+1. Opened the Web Browser on a PC in the Sales department.
+2. Entered www.food-dist.com in the address bar.
+3. The custom company homepage loaded successfully, proving that inter-VLAN routing and application services are fully operational.
+
+![Server7](Images/Server7.jpg)
+
+![Server8](Images/Server8.jpg)
+
+To further analyze the network communication, Simulation Mode was used to track TCP traffic. This confirmed the reliable delivery of data and verified that the Router correctly performs Inter-VLAN routing for every step of the TCP three-way handshake.
 
