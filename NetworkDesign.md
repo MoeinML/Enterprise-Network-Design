@@ -182,4 +182,12 @@ We activated the Web Server service to host the company’s internal portal.
 
 ![Server3](Images/Server3.jpg)
 
+#### 🗂️ Step 3: Enabling DNS Service (Domain Name Setup)
+To avoid using complex IP addresses, the DNS service was configured to map a domain name to the Server’s IP.
+- Navigated to Services > DNS and turned the service On.
+- Added a new A Record:
+  - **Name:** www.food-dist.com
+  - **Address:** 192.168.50.10
+
+
 
