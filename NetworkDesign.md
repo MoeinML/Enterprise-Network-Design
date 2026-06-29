@@ -1,10 +1,9 @@
 # Design & Simulate a Multi-Network Infrastructure
 
-## Part 1: Network Design & IP Addressing Plan
+## 🌟 Part 1: Network Design & IP Addressing Plan
+
 ### 1.1 Project Overview
 This project focuses on designing and implementing a structured network for a Food Distribution Company. The network is designed to ensure high availability, security, and efficient data flow between different departments. The infrastructure is divided into five distinct subnets to manage traffic and enhance security policies.
-
----
 
 ### 1.2 Departmental Breakdown
 The company’s operations are organized into the following functional areas:
@@ -14,7 +13,29 @@ The company’s operations are organized into the following functional areas:
 - IT: Dedicated to network management and technical support.
 - Servers: A centralized area hosting essential services like HTTP (Web) and DNS.
 
----
-
 ### 1.3 IP Addressing Table
 The following table outlines the IPv4 addressing scheme used for the project:
+| Department (VLAN) | Network Address | Subnet Mask | Default Gateway |
+| :--- | :--- | :--- | :--- |
+| Finance | 192.168.10.0 | 255.255.255.0 | 192.168.10.1 |
+| Sales | 192.168.20.0 | 255.255.255.0 | 192.168.20.1 |
+| Admin | 192.168.30.0 | 255.255.255.0 | 192.168.30.1 |
+| IT | 192.168.40.0 | 255.255.255.0 | 192.168.40.1 |
+| Servers | 192.168.50.0 | 255.255.255.0 | 192.168.40.1 |
+
+### 1.4 Network Diagram
+The proposed network topology is designed using a Star-Hierarchical approach. In this design, a central Cisco 2911 Router serves as the core of the infrastructure, interconnecting three primary directions (Top, Left, and Right). Each direction is managed by a switch that supports one or more departments through logical segmentation.
+
+![Diagram](Images/Diagram.png)
+
+### 1.5 Design Justification
+- Easy to Expand (Scalability): Using separate switches for each side makes it easy to add more computers in the future without disturbing the rest of the network.
+- Better Organization (Logical Segmentation): We used "Sub-interfaces" on the router to keep departments like Finance private and safe from general traffic, while still allowing them to talk to other units when needed.
+- Smart Use of Tools (Resource Efficiency): This design uses the router’s high-speed ports effectively to make sure everyone can access the Server Farm quickly and without delay.
+
+---
+## 🌟 Part 2 – Network Implementation
+
+### 2.1 Building the Topology
+The physical network was constructed in Cisco Packet Tracer using a Cisco 2911 Router and three Cisco 2960 Switches. The organization is divided into five logical units: Admin, IT, Servers, Finance, and Sales. Each unit is connected to the central router to ensure a structured star topology.
+
