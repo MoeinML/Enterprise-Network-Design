@@ -41,5 +41,42 @@ The physical network was constructed in **Cisco Packet Tracer** using a **Cisco 
 
 ![Topology](Images/Topology.png)
 
+### 2.2 Assigning IP Addresses
+Following the predefined addressing plan, static IP addresses and Subnet Masks were assigned to all end-devices. Each PC and Server was configured with its specific **Default Gateway** (the router’s sub-interface IP) to allow communication outside its own network.
+
+### 2.3 Router Interface Configuration
+The router was configured to handle multiple networks through a single physical port using the Router-on-a-Stick method.
+- **Encapsulation:** 802.1Q protocol was used to distinguish between different VLANs.
+- **Sub-interfaces:** Separate virtual interfaces were created (e.g., G0/1.10, G0/1.20) to act as gateways for each department.
+
+```
+enable
+configure terminal
+interface gig0/0
+no shutdown
+interface gig0/0.40
+encapsulation dot1Q 40
+ip address 192.168.40.1 255.255.255.0
+interface gig0/0.50
+encapsulation dot1Q 50
+ip address 192.168.50.1 255.255.255.0
+interface gig0/1
+no shutdown
+interface gig0/1.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+interface gig0/1.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+interface gig0/2
+no shutdown
+ip address 192.168.30.1 255.255.255.0
+exit
+exit
+write memory
+```
+
+![Router](Images/Router.jpg)
+
 
 
