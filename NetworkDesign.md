@@ -171,3 +171,11 @@ Before enabling services, the Server was configured with a static IP address to 
 - **Default Gateway:** 192.168.50.1 (Router’s sub-interface for the Server Farm)
 - **DNS Server:** 192.168.50.10 (The server points to itself for DNS resolution)
 
+![Server1](Images/Server1.jpg)
+
+#### 🗂️ Step 2: Enabling HTTP Service (Company Website)
+We activated the Web Server service to host the company’s internal portal.
+- Navigated to Services > HTTP and turned On both HTTP and HTTPS options.
+- Edited the index.html file to display a custom welcome message: ``` <h1>Welcome to Food Distribution Co. Portal</h1>.```
+
+
